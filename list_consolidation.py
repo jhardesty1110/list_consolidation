@@ -2,6 +2,11 @@
 
 """
   Author:  Jim Hardesty
+  
+  This is a script to consolidate the lists of unordered masks with data from
+  all of the chips into one list for easier processing
+  
+  Execute the script in the directory which contains the dodata.run.results file
 
 """
 
@@ -32,25 +37,17 @@ def main():
     
 
     dodata_run_list = open("dodata.run.results", "r")
-    #tech_list_contents = tech_list.readlines()     #convert the text file into a list.   Gives newline character at end of each list element
-    #tech_list_contents_test = tech_list.read()     #convert the text file into a list.   Gives newline character at end of each list element
 
-    dodata_run__list_contents = [line.rstrip() for line in dodata_run_list]       #convert the text file into a list.  Takes out the newline character and trailing whitespace.
+    dodata_run__list_contents = [line.rstrip() for line in dodata_run_list]   #convert the text file into a list.  Takes out the newline character and trailing whitespace.
 
 
     #print dodata_run_list_contents
 
-
-
-    #tech_list_contents = []
-    #for line in tech_list:
-         #tech_list_contents.append(line.rstrip('\n')) 
          
-
     master_layer_list = []
 
 
-
+    # make the list iterable
 
     item_iter = iter(dodata_run__list_contents)
 
